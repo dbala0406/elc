@@ -2,7 +2,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
-import AboutUs from "./components/AboutUs";
+import OurGoal from "./components/OurGoal";
 import Courses from "./components/Courses";
 import Features from "./components/Features";
 import Statistics from "./components/Statistics";
@@ -19,7 +19,7 @@ function App() {
       <div className="bg-gradient-to-br from-purple-50 to-gray-100">
         <Header />
         <Banner />
-        <AboutUs />
+        <OurGoal />
         <Features />
         <Statistics />
         {/* <Gallery /> */}

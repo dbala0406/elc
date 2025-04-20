@@ -9,7 +9,7 @@ export default function Header() {
   const sections = [
     { name: "Home", id: "home" },
     { name: "Courses", id: "courses" },
-    { name: "Gallery", id: "gallery" },
+    { name: "FAG", id: "faq" },
     { name: "Testimonials", id: "testimonials" },
     { name: "Contact", id: "contact" },
   ];
