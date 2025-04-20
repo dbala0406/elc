@@ -47,7 +47,7 @@ export default function TestimonialSection() {
 
       <div className="flex flex-col md:flex-row items-center justify-start ">
         {/* Image Section */}
-        <div className="w-full md:w-[30%]">
+        {/* <div className="w-full md:w-[30%]">
           <motion.img
             key={index}
             src={testimonials[index].img}
@@ -58,7 +58,7 @@ export default function TestimonialSection() {
             exit={{ opacity: 0, x: -50 }}
             transition={{ duration: 0.5 }}
           />
-        </div>
+        </div> */}
 
         {/* Testimonial Section */}
         <div className="w-full md:px-10 lg:w-[60%] flex flex-col items-center text-center md:text-left md:items-start">

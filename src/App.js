@@ -22,11 +22,12 @@ function App() {
         <AboutUs />
         <Features />
         <Statistics />
-        <Gallery />
+        {/* <Gallery /> */}
         <Courses />
         <Testimonials2 />
         <FAQ />
         <Contact />
+        <FloatingHelpIcon />
         <Footer />
       </div>
     </Router>

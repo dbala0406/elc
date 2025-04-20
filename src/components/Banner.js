@@ -20,7 +20,7 @@ export default function Banner() {
             {[
               "One to One private tutoring session",
               "Flexible Timing",
-              "Multi-Language Spoken Classes",
+              "Premium Group Classes",
               "Professional and Special Courses",
             ].map((feature, index) => (
               <motion.div
@@ -48,7 +48,7 @@ export default function Banner() {
             className="flex space-x-3 mt-8"
           >
             <a
-              href="https://wa.me/9607744531"
+              href="viber://chat?number=+9607744531"
               className="inline-flex items-center justify-center px-6 py-3 text-md md:text-lg xl:text-lg font-semibold text-purple-900 border border-purple-400 rounded-xl hover:bg-purple-200 focus:ring-4 focus:ring-purple-200 shadow-md transition-transform transform hover:scale-105 font-montserrat"
             >
               Book a free trial

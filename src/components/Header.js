@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; // Icon imports
-import elclogo from "../assets/elc-logo.png";
+// import elclogo from "../assets/elc-logo.png";
+import elclogo from "../assets/elc-logo1.png";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);

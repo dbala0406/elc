@@ -20,6 +20,32 @@ code {
     monospace;
 }
 
+/* Custom scrollbar styles */
+.course-scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+
+.course-scrollbar::-webkit-scrollbar-track {
+  background: #f3e8ff; /* light purple track */
+  border-radius: 100vh;
+}
+
+.course-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #a855f7; /* purple thumb */
+  border-radius: 100vh;
+  border: 2px solid #f3e8ff;
+}
+
+/* Optional: Firefox scrollbar */
+.course-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #a855f7 #f3e8ff;
+}
+
+.floating-icons {
+  z-index: 60;
+}
+
 
 @media (max-width: 768px) {
   .stat-cards-mobile {

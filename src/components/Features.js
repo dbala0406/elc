@@ -4,7 +4,7 @@ export default function Features() {
   const features = [
     { title: "Expert Educators from Around the World", icon: <FaGlobe className="w-7 h-7" /> },
     { title: "Comprehensive Learning for Grades 1-12", icon: <FaBook className="w-7 h-7" /> },
-    { title: "Small Group Learning (Max 4 Students)", icon: <FaUsers className="w-7 h-7" /> },
+    { title: "Small Group Learning (Max 5 Students)", icon: <FaUsers className="w-7 h-7" /> },
     { title: "International Syllabus Coverage", icon: <FaGlobeAmericas className="w-7 h-7" /> },
     { title: "Fast-Track Courses for Quick Learning", icon: <FaRocket className="w-7 h-7" /> },
     { title: "Exam-Focused Preparation Programs", icon: <FaClipboardList className="w-7 h-7" /> },

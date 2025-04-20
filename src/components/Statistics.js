@@ -23,9 +23,9 @@ function useAnimatedCounter(targetValue, duration = 2000) {
 }
 
 export default function Statistics() {
-  const studentsEnrolled = useAnimatedCounter(5000);
+  const studentsEnrolled = useAnimatedCounter(1000);
   const classesCompleted = useAnimatedCounter(20000);
-  const availableCourses = useAnimatedCounter(50);
+  const availableCourses = useAnimatedCounter(30);
 
   return (
     <section id="satistics" className="bg-gradient-to-br from-purple-50 to-gray-100 pt-12 sm:pt-16">
