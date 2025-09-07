@@ -1,29 +1,96 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+// Import all feedback images
+import feedback1 from "../assets/Feedbacks/feedback-1.png";
+import feedback2 from "../assets/Feedbacks/feedback-2.png";
+import feedback3 from "../assets/Feedbacks/feedback-3.png";
+import feedback4 from "../assets/Feedbacks/feedback-4.png";
+import feedback5 from "../assets/Feedbacks/feedback-5.png";
+import feedback6 from "../assets/Feedbacks/feedback-6.png";
+import feedback7 from "../assets/Feedbacks/feedback-7.png";
+import feedback8 from "../assets/Feedbacks/feedback-8.png";
+import feedback9 from "../assets/Feedbacks/feedback-9.png";
+import feedback10 from "../assets/Feedbacks/feedback-10.png";
+import feedback11 from "../assets/Feedbacks/feedback-11.png";
+import feedback12 from "../assets/Feedbacks/feedback-12.png";
+import feedback13 from "../assets/Feedbacks/feedback-13.png";
+import feedback14 from "../assets/Feedbacks/feedback-14.png";
+
 const testimonials = [
   {
-    text: "hello! As one of e-learning centres very first students, I am happy to say that since day one, all my subject tutors were professional, highly skilled in teaching and motivating. The team is absolutely diligent, especially the teachers. I'll always recommend e-learning centre to all my family and friends. Thank you for the support and enthusiasm that your team has always shown to me as a student.",
     name: "Aishath Zaiba",
     position: "Student",
-    img: "https://randomuser.me/api/portraits/women/32.jpg",
+    img: feedback1,
   },
   {
-    text: "Center eh medhuverikoh kuraairu mikan ragalhu vaane kamah balaafa kuree. Aslu miadhuge claahun ves faahaga kurevunu teacher ge kind kamaa. Kudhinaa talk kuraagoh v ragalhukan. Ekamu ves just meehakah trust kuran eh faharun neygeynetha. Ehen veema suvaalu kohleeves. But v ufaave thikolhun v avas reply dheyleh. V hinhama jehey adhi.",
     name: "Daniel Wong",
     position: "Student",
-    img: "https://randomuser.me/api/portraits/men/45.jpg",
+    img: feedback2,
   },
   {
-    text: "The improvement in my child’s academic performance has been incredible. The structured lessons and dedicated tutors have made a huge difference. Highly recommended!",
     name: "Linda Chia",
     position: "Parent",
-    img: "https://randomuser.me/api/portraits/women/50.jpg",
+    img: feedback3,
+  },
+  {
+    name: "Student Feedback",
+    position: "Messenger Screenshot",
+    img: feedback4,
+  },
+  {
+    name: "Student Feedback",
+    position: "Messenger Screenshot",
+    img: feedback5,
+  },
+  {
+    name: "Student Feedback",
+    position: "Messenger Screenshot",
+    img: feedback6,
+  },
+  {
+    name: "Student Feedback",
+    position: "Messenger Screenshot",
+    img: feedback7,
+  },
+  {
+    name: "Student Feedback",
+    position: "Messenger Screenshot",
+    img: feedback8,
+  },
+  {
+    name: "Student Feedback",
+    position: "Messenger Screenshot",
+    img: feedback9,
+  },
+  {
+    name: "Student Feedback",
+    position: "Messenger Screenshot",
+    img: feedback10,
+  },
+  {
+    name: "Student Feedback",
+    position: "Messenger Screenshot",
+    img: feedback11,
+  },
+  {
+    name: "Student Feedback",
+    position: "Messenger Screenshot",
+    img: feedback12,
+  },
+  {
+    name: "Student Feedback",
+    position: "Messenger Screenshot",
+    img: feedback13,
+  },
+  {
+    name: "Student Feedback",
+    position: "Messenger Screenshot",
+    img: feedback14,
   },
 ];
 
-
-export default function TestimonialSection() {
+const Testimonials2 = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -34,70 +101,70 @@ export default function TestimonialSection() {
   }, []);
 
   return (
-    <section id="testimonials" className="bg-white py-[40px] sm:pt-16 px-[10%]">
-      <div>
-        <p className="sm:text-lg text-md mb-2 text-gray-800 text-md font-montserrat">
+    <section id="testimonials" className="bg-white py-8 sm:py-12 px-4 md:px-8">
+      <div className="text-center max-w-3xl mx-auto">
+        <p className="text-md sm:text-lg mb-2 text-gray-800 font-montserrat">
           What Our Happy Parents and Students Say
         </p>
-        <h2 className="font-bold tracking-tight text-purple-900 sm:text-4xl text-xl font-montserrat mb-[30px]">
+        <h2 className="font-bold tracking-tight text-purple-900 text-2xl sm:text-4xl font-montserrat mb-6 sm:mb-8">
           Our <span className="italic text-yellow-600 mr-2">happy</span> parents and students
           say about us
         </h2>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-start ">
-        {/* Image Section */}
-        {/* <div className="w-full md:w-[30%]">
-          <motion.img
-            key={index}
-            src={testimonials[index].img}
-            alt={testimonials[index].name}
-            className="w-full rounded-xl shadow-lg"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 0.5 }}
-          />
-        </div> */}
-
-        {/* Testimonial Section */}
-        <div className="w-full md:px-10 lg:w-[60%] flex flex-col items-center text-center md:text-left md:items-start">
+      <div className="flex flex-col items-center justify-center">
+        {/* Testimonial Image Container */}
+        <div className="w-full max-w-2xl mx-auto">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
-              className="mt-6 bg-gradient-to-r from-gray-100 via-purple-100 to-gray-50 p-8 rounded-xl shadow-md w-full"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 50 }}
-              transition={{ duration: 0.5 }}
+              className="bg-white p-3 sm:p-4 rounded-xl shadow-lg flex flex-col items-center"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.4 }}
             >
-              <p className="sm:text-lg text-md text-gray-800 font-montserrat">
-                “{testimonials[index].text}”
-              </p>
-              <p className="sm:text-lg text-md mt-4 font-semibold text-gray-800 font-montserrat tracking-wide">
-                {testimonials[index].name}
-              </p>
-              <p className="sm:text-md text-sm text-gray-600 italic text-gray-800 font-montserrat">
-                {testimonials[index].position}
-              </p>
+              {/* Image container with constrained dimensions */}
+              <div className="w-full overflow-hidden rounded-lg flex justify-center bg-gray-100 min-h-[300px] sm:min-h-[400px]">
+                <img
+                  src={testimonials[index].img}
+                  alt={`Testimonial from ${testimonials[index].name}`}
+                  className="object-contain max-h-[300px] sm:max-h-[400px] w-auto"
+                  style={{ maxWidth: "100%" }}
+                />
+              </div>
+              <div className="mt-3 sm:mt-4 text-center">
+                <p className="text-md sm:text-lg font-semibold text-gray-800 font-montserrat">
+                  {testimonials[index].name}
+                </p>
+                <p className="text-sm sm:text-md text-gray-600 italic font-montserrat">
+                  {testimonials[index].position}
+                </p>
+              </div>
             </motion.div>
           </AnimatePresence>
 
-          {/* Pagination Dots */}
-          <div className="flex space-x-2 mt-6">
-            {testimonials.map((_, i) => (
-              <span
-                key={i}
-                className={`h-3 w-3 rounded-full transition-all ${
-                  i === index
-                    ? "bg-gradient-to-r from-purple-100 via-yellow-400 to-yellow-600 w-4"
-                    : "bg-gray-300"
-                }`}
-              />
-            ))}
+          {/* Pagination Dots - Scrollable if too many */}
+          <div className="flex justify-center mt-4 sm:mt-6 overflow-x-auto py-2">
+            <div className="flex space-x-2">
+              {testimonials.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setIndex(i)}
+                  className={`flex-shrink-0 h-3 w-3 rounded-full transition-all ${
+                    i === index
+                      ? "bg-gradient-to-r from-purple-500 via-yellow-400 to-yellow-600 w-4"
+                      : "bg-gray-300"
+                  }`}
+                  aria-label={`Go to testimonial ${i + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
 }
+
+export default Testimonials2;

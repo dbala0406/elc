@@ -9,7 +9,7 @@ export default function FloatingHelpIcon() {
         href="https://wa.me/9607744531"  // Replace with your WhatsApp number
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-transform transform hover:scale-110 cursor-pointer"
+        className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-transform transform hover:scale-110 cursor-pointer text-center"
       >
         <FontAwesomeIcon icon={faWhatsapp} className="text-2xl" />
       </a>
@@ -19,7 +19,7 @@ export default function FloatingHelpIcon() {
         href="viber://chat?number=+9607744531"  // Replace with your Viber number
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600 transition-transform transform hover:scale-110 cursor-pointer"
+        className="bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600 transition-transform transform hover:scale-110 cursor-pointer text-center"
       >
         <FontAwesomeIcon icon={faViber} className="text-2xl" />
       </a>
