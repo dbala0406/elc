@@ -2,66 +2,144 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
-export default function FAQ() {
+const FAQ = () => {
   const faqs = [
     {
-      question: "What courses do you offer?",
-      answer:
-        "We provide tutoring in Mathematics, Science, English, and more for different grade levels.",
+      category: "General Inquiries",
+      questions: [
+        {
+          question: "What subjects do you offer tuition for?",
+          answer: "We offer tuition for all subjects and all syllabus.",
+        },
+        {
+          question: "What age groups or classes do you cater to?",
+          answer: "We cater to students starting from 6 years old.",
+        },
+      ],
     },
     {
-      question: "How much does a tutoring session cost?",
-      answer:
-        "Pricing varies based on the course and tutor. Contact us for detailed fee structures.",
+      category: "Admission and Enrollment",
+      questions: [
+        {
+          question: "What is the admission process for joining the tuition centre?",
+          answer: "Simply fill out our enrollment form and complete your payment.",
+        },
+        {
+          question: "Do you offer trial classes or demo sessions?",
+          answer: "Yes, we offer trial classes for new students.",
+        },
+      ],
     },
     {
-      question: "How does online tutoring work?",
-      answer:
-        "Our tutors conduct 1:1 live sessions using interactive tools to enhance learning.",
+      category: "Faculty and Safety",
+      questions: [
+        {
+          question: "What are the qualifications and experience of your tutors?",
+          answer: "Our tutors are highly experienced in delivering effective lessons.",
+        },
+        {
+          question: "Do tutors provide individual attention to students?",
+          answer: "Yes, we offer private classes which ensure individual attention. Our group classes also maintain small sizes to allow for personalized focus.",
+        },
+      ],
     },
     {
-      question: "Do you offer trial classes?",
-      answer: "Yes! We offer a free trial session to help you decide before enrolling.",
+      category: "Classes and Scheduling",
+      questions: [
+        {
+          question: "What are the class sizes and student-teacher ratios?",
+          answer: "Our group classes have a maximum of 5 students.",
+        },
+        {
+          question: "Can parents request specific tutors or class timings?",
+          answer: "Yes, we will try our best to accommodate these requests.",
+        },
+        {
+          question: "How do you handle missed classes or rescheduling?",
+          answer: "By informing earlier, we provide additional classes to recover the missed classes.",
+        },
+      ],
+    },
+    {
+      category: "Results and Outcomes",
+      questions: [
+        {
+          question: "What kind of results have your students achieved in past exams?",
+          answer: "Our students have achieved an average of 90% in their exams.",
+        },
+      ],
     },
   ];
 
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openCategory, setOpenCategory] = useState(null);
+  const [openQuestion, setOpenQuestion] = useState(null);
 
   return (
     <section id="faq" className="bg-gradient-to-br from-purple-50 to-gray-100 py-[50px]">
-      <div className="max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <h2 className="font-bold tracking-tight text-purple-900 text-xl sm:text-4xl font-montserrat mb-10">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="font-bold tracking-tight text-purple-900 text-xl sm:text-4xl font-montserrat mb-10 text-center">
           Frequently Asked Questions
         </h2>
-        <div className="space-y-5">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-white p-5 rounded-lg shadow-lg cursor-pointer border border-gray-200 transition-all hover:bg-gray-100"
-              onClick={() => setOpenIndex(openIndex === index ? null : index)}
-            >
-              <div className="flex justify-between items-start">
-                <h3 className="text-start text-md sm:text-lg font-semibold text-gray-800 font-montserrat">
-                  {faq.question}
+        <div className="space-y-6">
+          {faqs.map((category, categoryIndex) => (
+            <div key={categoryIndex} className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
+              <div 
+                className="p-5 cursor-pointer flex justify-between items-center bg-purple-50"
+                onClick={() => setOpenCategory(openCategory === categoryIndex ? null : categoryIndex)}
+              >
+                <h3 className="text-md sm:text-lg font-semibold text-purple-800 font-montserrat">
+                  {category.category}
                 </h3>
                 <motion.div
-                  animate={{ rotate: openIndex === index ? 180 : 0 }}
+                  animate={{ rotate: openCategory === categoryIndex ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <ChevronDown />
+                  <ChevronDown className="text-purple-700" />
                 </motion.div>
               </div>
-
+              
               <AnimatePresence>
-                {openIndex === index && (
-                  <motion.p
+                {openCategory === categoryIndex && (
+                  <motion.div
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="text-left mt-3 text-gray-700 text-md sm:text-lg font-montserrat leading-relaxed"
+                    className="px-5"
                   >
-                    {faq.answer}
-                  </motion.p>
+                    <div className="py-4 space-y-4">
+                      {category.questions.map((faq, questionIndex) => (
+                        <div key={questionIndex} className="pb-4 border-b border-gray-100 last:border-b-0 last:pb-0">
+                          <div 
+                            className="flex justify-between items-start cursor-pointer"
+                            onClick={() => setOpenQuestion(openQuestion === `${categoryIndex}-${questionIndex}` ? null : `${categoryIndex}-${questionIndex}`)}
+                          >
+                            <h4 className="text-md font-medium text-gray-800 font-montserrat pr-4">
+                              {faq.question}
+                            </h4>
+                            <motion.div
+                              animate={{ rotate: openQuestion === `${categoryIndex}-${questionIndex}` ? 180 : 0 }}
+                              transition={{ duration: 0.3 }}
+                            >
+                              <ChevronDown size={20} />
+                            </motion.div>
+                          </div>
+                          
+                          <AnimatePresence>
+                            {openQuestion === `${categoryIndex}-${questionIndex}` && (
+                              <motion.p
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: "auto" }}
+                                exit={{ opacity: 0, height: 0 }}
+                                className="mt-3 text-gray-700 text-sm sm:text-base font-montserrat leading-relaxed pl-2"
+                              >
+                                {faq.answer}
+                              </motion.p>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
                 )}
               </AnimatePresence>
             </div>
@@ -71,3 +149,5 @@ export default function FAQ() {
     </section>
   );
 }
+
+export default FAQ;
