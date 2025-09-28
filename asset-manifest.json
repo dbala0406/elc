@@ -1,19 +1,33 @@
 {
   "files": {
-    "main.css": "/elc/static/css/main.b3b4907f.css",
-    "main.js": "/elc/static/js/main.46cc6339.js",
+    "main.css": "/elc/static/css/main.c2518147.css",
+    "main.js": "/elc/static/js/main.70f8a328.js",
     "static/media/elc-gallery-img2.jpg": "/elc/static/media/elc-gallery-img2.60fe23a3b4922c029d82.jpg",
-    "static/media/elc-course-history.jpg": "/elc/static/media/elc-course-history.127a4cc1334a364b25d7.jpg",
     "static/media/elc-course-maths.jpg": "/elc/static/media/elc-course-maths.5c7693bb5d5a8c322447.jpg",
+    "static/media/elc-course-business.jpg": "/elc/static/media/elc-course-business.2c6023fc2bec3b0d4e4f.jpg",
     "static/media/elc-gallery-img1.jpg": "/elc/static/media/elc-gallery-img1.08c353ed72627caad445.jpg",
     "static/media/elc-gallery-img3.jpg": "/elc/static/media/elc-gallery-img3.aa78a354d215900f108e.jpg",
     "static/media/elc-course-cs.jpg": "/elc/static/media/elc-course-cs.f11c596ea5169c8ccf00.jpg",
     "static/media/medium-shot-kid-taking-notes.jpg": "/elc/static/media/medium-shot-kid-taking-notes.ead1c09d8482963a7fbb.jpg",
     "static/media/elc-course-english.jpg": "/elc/static/media/elc-course-english.b1bcaed6bb3c7332e93a.jpg",
     "static/media/elc-course-science.jpg": "/elc/static/media/elc-course-science.70829dfc5f94bedf3348.jpg",
-    "static/media/elc-logo.png": "/elc/static/media/elc-logo.738fbe6f22e9d48019f0.png",
+    "static/media/feedback-13.png": "/elc/static/media/feedback-13.37e4605b888a59728d88.png",
+    "static/media/feedback-7.png": "/elc/static/media/feedback-7.dbf00f3c85f960ace367.png",
+    "static/media/feedback-11.png": "/elc/static/media/feedback-11.f68786e88b866a0e4eea.png",
+    "static/media/feedback-10.png": "/elc/static/media/feedback-10.869953ca931744a42b12.png",
+    "static/media/feedback-2.png": "/elc/static/media/feedback-2.10ec4687bcf8b52763a5.png",
+    "static/media/feedback-6.png": "/elc/static/media/feedback-6.6ff3bec3618946d9e935.png",
+    "static/media/feedback-5.png": "/elc/static/media/feedback-5.3ffc145820abfe57dd20.png",
+    "static/media/feedback-12.png": "/elc/static/media/feedback-12.1fa6defd28ce897722b6.png",
+    "static/media/feedback-1.png": "/elc/static/media/feedback-1.ac3af75c5d7aad90ee9d.png",
+    "static/media/feedback-4.png": "/elc/static/media/feedback-4.2655c25a533a7f2b4889.png",
+    "static/media/feedback-9.png": "/elc/static/media/feedback-9.c67359bc9b93d0ed228c.png",
+    "static/media/feedback-3.png": "/elc/static/media/feedback-3.931cb2b628c857d6a66a.png",
+    "static/media/feedback-8.png": "/elc/static/media/feedback-8.786cd6f2a913ad7ce7b5.png",
+    "static/media/feedback-14.png": "/elc/static/media/feedback-14.18c358b61a6aae43b5a3.png",
     "static/media/inter-latin-ext-400-normal.woff": "/elc/static/media/inter-latin-ext-400-normal.1c20f7dc20d731a18fcd.woff",
     "static/media/montserrat-latin-ext-400-normal.woff": "/elc/static/media/montserrat-latin-ext-400-normal.85beb71046499a27877f.woff",
+    "static/media/elc-logo-transparent.png": "/elc/static/media/elc-logo-transparent.5c520a7842a9eba33dad.png",
     "static/media/montserrat-latin-ext-400-normal.woff2": "/elc/static/media/montserrat-latin-ext-400-normal.1974241fa9a808c0c154.woff2",
     "static/media/inter-latin-400-normal.woff": "/elc/static/media/inter-latin-400-normal.b0c8fe9db56dd415a25a.woff",
     "static/media/inter-latin-ext-400-normal.woff2": "/elc/static/media/inter-latin-ext-400-normal.3d10c85fbd16969509a2.woff2",
@@ -49,11 +63,11 @@
     "static/media/inter-greek-ext-400-normal.woff2": "/elc/static/media/inter-greek-ext-400-normal.f2fa0d9ef98f59d4a75b.woff2",
     "static/media/inter-vietnamese-400-normal.woff2": "/elc/static/media/inter-vietnamese-400-normal.44c9df135eec470b0ab6.woff2",
     "index.html": "/elc/index.html",
-    "main.b3b4907f.css.map": "/elc/static/css/main.b3b4907f.css.map",
-    "main.46cc6339.js.map": "/elc/static/js/main.46cc6339.js.map"
+    "main.c2518147.css.map": "/elc/static/css/main.c2518147.css.map",
+    "main.70f8a328.js.map": "/elc/static/js/main.70f8a328.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3b4907f.css",
-    "static/js/main.46cc6339.js"
+    "static/css/main.c2518147.css",
+    "static/js/main.70f8a328.js"
   ]
 }
